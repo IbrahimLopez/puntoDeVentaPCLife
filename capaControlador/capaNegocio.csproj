@@ -41,12 +41,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="NCategoria.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\capaDeDatos\capaDeDatos.csproj">
+    <ProjectReference Include="..\capaDeDatos\capaDatos.csproj">
       <Project>{4b7ffbfd-ea6f-43ae-923b-47ac310caaa3}</Project>
-      <Name>capaDeDatos</Name>
+      <Name>capaDatos</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

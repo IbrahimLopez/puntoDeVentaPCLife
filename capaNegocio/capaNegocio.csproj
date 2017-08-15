@@ -4,12 +4,12 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{86B4648F-987E-47A7-8129-DCDC78B5DC75}</ProjectGuid>
+    <ProjectGuid>{7C2B0B75-5B6B-40C4-B91C-D8EF34C422DB}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>capaVista</RootNamespace>
-    <AssemblyName>capaVista</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <RootNamespace>capaNegocio</RootNamespace>
+    <AssemblyName>capaNegocio</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -41,12 +41,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="NCategoria.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\capaControlador\capaControlador.csproj">
-      <Project>{90c2911e-1986-4410-a8e2-2aecedb51138}</Project>
-      <Name>capaControlador</Name>
+    <ProjectReference Include="..\capaDeDatos\capaDeDatos.csproj">
+      <Project>{4b7ffbfd-ea6f-43ae-923b-47ac310caaa3}</Project>
+      <Name>capaDeDatos</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

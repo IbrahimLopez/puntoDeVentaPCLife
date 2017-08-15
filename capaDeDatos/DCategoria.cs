@@ -8,7 +8,7 @@ using System.Data.SqlClient;
 
 namespace capaDeDatos
 {
-    class DCategoria
+   public class DCategoria
     {
         //Atributos de categorias
         private int _Idcategoria;
