@@ -8,7 +8,7 @@ using System.Data;
 
 namespace capaControlador
 {
-  public class NCategoria
+    public class NCategoria
     {
 
         //Método Insertar que llama al método Insertar de la clase DCategoria
