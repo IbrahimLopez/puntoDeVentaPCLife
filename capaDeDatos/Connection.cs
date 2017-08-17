@@ -8,9 +8,7 @@ namespace capaDeDatos
 {
     class Connection
     {
-        public static string
-        //ApplicationDbContext = "DataSource=AURELIOGÁLVEZ\\SQLEXPRESS; Initial Catalog=dbventas;" + " Integrated Security=true; providerName=System.Data.SqlClient";
-
-        ApplicationDbContext = "Data Source=IBRAH/SQLEXPRESS;Initial Catalog = dbventas; Integrated Security = True;";
+        public static string      
+         ApplicationDbContext = "Data Source=IBRAH\\SQLEXPRESS;Initial Catalog = dbventas; Integrated Security = True;";
     }
 }
