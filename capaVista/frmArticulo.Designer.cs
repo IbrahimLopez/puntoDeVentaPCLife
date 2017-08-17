@@ -60,13 +60,13 @@
             this.btnNuevo = new System.Windows.Forms.Button();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtIdarticulo = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.errorIcono = new System.Windows.Forms.ErrorProvider(this.components);
             this.ttMensaje = new System.Windows.Forms.ToolTip(this.components);
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtIdarticulo = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataListado)).BeginInit();
@@ -313,6 +313,7 @@
             // pxImagen
             // 
             this.pxImagen.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pxImagen.BackgroundImage")));
+            this.pxImagen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pxImagen.Location = new System.Drawing.Point(485, 115);
             this.pxImagen.Name = "pxImagen";
             this.pxImagen.Size = new System.Drawing.Size(188, 128);
@@ -397,6 +398,15 @@
             this.txtNombre.Size = new System.Drawing.Size(251, 20);
             this.txtNombre.TabIndex = 4;
             // 
+            // txtIdarticulo
+            // 
+            this.txtIdarticulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.txtIdarticulo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtIdarticulo.Location = new System.Drawing.Point(147, 46);
+            this.txtIdarticulo.Name = "txtIdarticulo";
+            this.txtIdarticulo.Size = new System.Drawing.Size(100, 20);
+            this.txtIdarticulo.TabIndex = 3;
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -416,6 +426,15 @@
             this.label4.TabIndex = 1;
             this.label4.Text = "Nombre:";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(67, 46);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(43, 13);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Código:";
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -434,24 +453,6 @@
             // ttMensaje
             // 
             this.ttMensaje.IsBalloon = true;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(67, 46);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 13);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Código:";
-            // 
-            // txtIdarticulo
-            // 
-            this.txtIdarticulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.txtIdarticulo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtIdarticulo.Location = new System.Drawing.Point(147, 46);
-            this.txtIdarticulo.Name = "txtIdarticulo";
-            this.txtIdarticulo.Size = new System.Drawing.Size(100, 20);
-            this.txtIdarticulo.TabIndex = 3;
             // 
             // frmArticulo
             // 

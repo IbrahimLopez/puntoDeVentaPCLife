@@ -58,13 +58,18 @@ namespace capaVista
 
         private void dataListado_DoubleClick(object sender, EventArgs e)
         {
-            frmArticulo form = new frmArticulo();
-            string par1=Convert.ToString(this.dataListado.CurrentRow.Cells["idcategoria"].Value);
-            string par2 = Convert.ToString(this.dataListado.CurrentRow.Cells["nombre"].Value);
+            frmArticulo form = frmArticulo.GetInstancia();
+            string par1, par2;
+            par1 = Convert.ToString(this.dataListado.CurrentRow.Cells["idcategoria"].Value);
+            par2 = Convert.ToString(this.dataListado.CurrentRow.Cells["nombre"].Value);
             form.setCategoria(par1, par2);
-            this.Close();
+            this.Hide();
 
         }
-       
+
+        private void dataListado_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

@@ -207,42 +207,34 @@ namespace capaVista
             try
             {
                 string respuesta = "";
-                if (this.txtNombre.Text == string.Empty)
+                if (this.txtNombre.Text == string.Empty || this.txtIdCategoria.Text == string.Empty || this.txtCodigo.Text == string.Empty)
                 {
                     MensajeError("Falta ingresar algunos datos, serán remarcados");
-                    errorIcono.SetError(txtNombre, "Ingrese un Nombre");                                        
-                }
-                if (this.txtIdCategoria.Text == string.Empty)
-                {
-                    MensajeError("Falta ingresar algunos datos, serán remarcados");
-                    errorIcono.SetError(txtIdCategoria, "Ingrese una IdCategoria");
-                }
-                if (this.txtCodigo.Text == string.Empty)
-                {
-                    MensajeError("Falta ingresar algunos datos, serán remarcados");
-                    errorIcono.SetError(txtCodigo, "Ingrese un Codigo");
-                }
-                if (this.txtCategoria.Text == string.Empty)
-                {
-                    MensajeError("Falta ingresar algunos datos, serán remarcados");
-                    errorIcono.SetError(txtCategoria, "Ingrese una Categoria");
+                    errorIcono.SetError(txtNombre, "Ingrese un Valor");
+                    errorIcono.SetError(txtCodigo, "Ingrese un Valor");
+                    errorIcono.SetError(txtCategoria, "Ingrese un Valor");
                 }
                 else
                 {
                     System.IO.MemoryStream ms = new System.IO.MemoryStream();
-                    this.pxImagen.Image.Save(ms,System.Drawing.Imaging.ImageFormat.Png);
+                    this.pxImagen.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
 
                     byte[] imagen = ms.GetBuffer();
+
+
                     if (this.IsNuevo)
                     {
-                        respuesta = NArticulo.Insertar(this.txtCodigo.Text,this.txtNombre.Text.Trim().ToUpper(),
-                            this.txtDescripcion.Text.Trim(), imagen, Convert.ToInt32(this.txtIdCategoria.Text), Convert.ToInt32(this.cbIdpresentacion.SelectedValue));
+                        respuesta = NArticulo.Insertar(this.txtCodigo.Text, this.txtNombre.Text.Trim().ToUpper(),
+                            this.txtDescripcion.Text.Trim(), imagen, Convert.ToInt32(this.txtIdCategoria.Text),
+                            Convert.ToInt32(this.cbIdpresentacion.SelectedValue));
 
                     }
                     else
                     {
-                        respuesta = NArticulo.Editar(Convert.ToInt32(this.txtIdarticulo.Text),this.txtCodigo.Text, this.txtNombre.Text.Trim().ToUpper(),
-                            this.txtDescripcion.Text.Trim(), imagen, Convert.ToInt32(this.txtIdCategoria.Text), Convert.ToInt32(this.cbIdpresentacion.SelectedValue));
+                        respuesta = NArticulo.Editar(Convert.ToInt32(this.txtIdarticulo.Text),
+                            this.txtCodigo.Text, this.txtNombre.Text.Trim().ToUpper(),
+                            this.txtDescripcion.Text.Trim(), imagen, Convert.ToInt32(this.txtIdCategoria.Text),
+                            Convert.ToInt32(this.cbIdpresentacion.SelectedValue));
                     }
 
                     if (respuesta.Equals("OK"))
