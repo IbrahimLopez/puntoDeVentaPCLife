@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmArticulo));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dataListado = new System.Windows.Forms.DataGridView();
@@ -312,7 +311,7 @@
             // 
             // pxImagen
             // 
-            this.pxImagen.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pxImagen.BackgroundImage")));
+            this.pxImagen.BackColor = System.Drawing.Color.Bisque;
             this.pxImagen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pxImagen.Location = new System.Drawing.Point(485, 115);
             this.pxImagen.Name = "pxImagen";

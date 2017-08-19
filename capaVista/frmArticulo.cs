@@ -216,8 +216,16 @@ namespace capaVista
                 }
                 else
                 {
-                    System.IO.MemoryStream ms = new System.IO.MemoryStream();
-                    this.pxImagen.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
+                   System.IO.MemoryStream ms = new System.IO.MemoryStream();
+                    if (this.pxImagen.Image == null)
+                    {                        
+                    }
+                    else
+                    {
+                        
+                        this.pxImagen.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
+                    }
+                    
 
                     byte[] imagen = ms.GetBuffer();
 

@@ -205,7 +205,7 @@ namespace capaDeDatos
                 SqlCommand.Connection = SqlConnection;
                 SqlCommand.CommandText = "speliminar_articulo";
                 SqlCommand.CommandType = CommandType.StoredProcedure;
-                //comando para insertar id categoria
+                //comando para eliminar 
                 SqlParameter ParIdArticulo = new SqlParameter();
                 ParIdArticulo.ParameterName = "@idpresentacion";
                 ParIdArticulo.SqlDbType = SqlDbType.Int;
@@ -243,7 +243,7 @@ namespace capaDeDatos
 
                 SqlDataAdapter SqlDataAdapter = new SqlDataAdapter(SqlCommand);
                 SqlDataAdapter.Fill(DtResultado);
-
+               
             }
             catch (Exception ex)
             {

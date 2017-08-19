@@ -18,7 +18,8 @@ namespace puntoDeVentaPCLife
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmProveedor());
+            Application.Run(new frmCliente());
+            //Application.Run(frmArticulo.GetInstancia());
         }
     }
 }
